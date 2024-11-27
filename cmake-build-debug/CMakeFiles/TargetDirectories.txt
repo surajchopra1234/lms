@@ -1,0 +1,3 @@
+C:/Users/Suraj/CLionProjects/lms/cmake-build-debug/CMakeFiles/lms.dir
+C:/Users/Suraj/CLionProjects/lms/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Suraj/CLionProjects/lms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
