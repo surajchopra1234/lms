@@ -115,7 +115,18 @@ public:
     }
 
     // Add a book to library
-    void addBook(string title, string author, string isbn) {
+    void addBook() {
+        string title, author, isbn;
+
+        cout << endl << "Enter Book Title:";
+        getline(cin, title);
+
+        cout << "Enter Author Name:";
+        getline(cin, author);
+
+        cout << "Enter ISBN:";
+        getline(cin, isbn);
+
         // Check if book with same ISBN already exists
         for (const auto &book: books) {
             if (book.getISBN() == isbn) {
@@ -150,7 +161,7 @@ public:
     }
 
     // View all books in library
-    void viewAllBooks() const {
+    void viewAllBooks() {
         if (books.empty()) {
             cout << endl << "No books in the library." << endl;
             return;
@@ -172,7 +183,7 @@ public:
     }
 
     // Get total number of books in library
-    int getTotalBooks() const {
+    int getTotalBooks() {
         return books.size();
     }
 };
@@ -191,21 +202,6 @@ class LibraryManagementSystem {
         cout << "0. Exit" << endl << endl;
     }
 
-    void addBookMenu() {
-        string title, author, isbn;
-
-        cout << endl << "Enter Book Title:";
-        getline(cin, title);
-
-        cout << "Enter Author Name:";
-        getline(cin, author);
-
-        cout << "Enter ISBN:";
-        getline(cin, isbn);
-
-        library.addBook(title, author, isbn);
-    }
-
 public:
     void run() {
         while (true) {
@@ -219,7 +215,7 @@ public:
 
             switch (choice) {
                 case 1:
-                    addBookMenu();
+                    library.addBook();
                     break;
                 case 2:
                     library.deleteBook();
