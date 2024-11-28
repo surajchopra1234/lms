@@ -347,7 +347,7 @@ public:
             if (book.getISBN() == isbn) {
                 string name, mobile, email;
 
-                cout << endl << "Enter Borrower Details:" << endl;
+                cout << endl << "Enter Returner Details:" << endl;
 
                 cout << "Enter Name:";
                 getline(cin, name);
